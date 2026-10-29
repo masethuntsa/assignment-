@@ -1,0 +1,162 @@
+
+:root {
+  --green: #4b1917;
+  --deep: #bee308;
+  --gold: #704be8;
+  --cream: #eff0f7;
+  --ink: #7a0af0;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+  line-height: 1.65;
+}
+
+
+.navbar {
+  background: var(--deep);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--gold) !important;
+}
+
+
+.hero {
+  background: linear-gradient(110deg, rgba(12, 48, 34, 0.88), rgba(12, 13, 48, 0.42)), 
+              url('images/highlands.jpeg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 6rem 0;
+}
+
+.hero h1 {
+  font-weight: 800;
+  max-width: 760px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.hero p {
+  max-width: 650px;
+  font-size: 1.15rem;
+}
+
+.page-banner {
+  background: var(--green);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+
+.section-space {
+  padding: 3.5rem 0;
+}
+
+.section-title {
+  color: var(--green);
+  font-weight: 750;
+}
+
+.feature {
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 1.4rem;
+  height: 100%;
+}
+
+
+.card {
+  border: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  overflow: hidden; /* Restricts the inner image zoom scale */
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+/* Specific gallery photos inherit the same base transition but with a lower scale */
+.card img.gallery-photo {
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+/* General card hover macro interaction */
+.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.card img.gallery-photo:hover {
+  transform: scale(1.035);
+}
+
+
+.btn-success {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.btn-success:hover {
+  background: var(--deep);
+  border-color: var(--deep);
+}
+
+form .form-label {
+  font-weight: 600;
+}
+
+.form-message {
+  display: none;
+}
+
+.table thead {
+  background: var(--green);
+  color: #fff;
+}
+
+
+footer {
+  background: var(--deep);
+  color: #fff;
+  padding: 1.4rem 0;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #f4d58a;
+}
+
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .section-space {
+    padding: 2.5rem 0;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
